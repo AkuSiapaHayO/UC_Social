@@ -48,10 +48,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
-import com.example.vp_alpapp.ListScreen
+import androidx.compose.ui.platform.LocalContext
 import com.example.vp_alpapp.R
 import com.example.vp_alpapp.viewmodel.RegisterViewModel
-import androidx.compose.ui.platform.LocalContext
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
