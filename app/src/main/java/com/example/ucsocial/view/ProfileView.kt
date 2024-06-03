@@ -45,12 +45,13 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.vp_alpapp.R
-import com.example.vp_alpapp.model.Content
-import com.example.vp_alpapp.model.Pengguna
+import com.example.ucsocial.model.Content
+import com.example.ucsocial.model.Pengguna
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
-import com.example.vp_alpapp.ListScreen
+import com.example.ucsocial.ListScreen
+import com.example.ucsocial.Post
+import com.example.vp_alpapp.R
 import com.example.vp_alpapp.viewmodel.ExploreViewModel
 import com.example.vp_alpapp.viewmodel.ProfileViewModel
 
@@ -102,8 +103,8 @@ fun Profile(
     navController: NavController,
     user: Pengguna,
     listku: List<Content>?,
-    exploreViewModel: ExploreViewModel,
-    profileViewModel: ProfileViewModel
+    profileViewModel: ProfileViewModel,
+    exploreViewModel: ExploreViewModel
 ) {
     LazyColumn(
         modifier = Modifier
@@ -209,29 +210,6 @@ fun Profile(
                     .padding(12.dp)
                     .clip(RoundedCornerShape(20.dp))
             ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp)
-                        .clickable {
-                            navController.navigate(ListScreen.EditProfile.name)
-                        },
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "Edit Profile",
-                        color = Color.White,
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Bold,
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.arrdownwhite),
-                        contentDescription = "",
-                        modifier = Modifier
-                            .size(20.dp)
-                    )
-                }
             }
         }
         // FOR LOOP HERE

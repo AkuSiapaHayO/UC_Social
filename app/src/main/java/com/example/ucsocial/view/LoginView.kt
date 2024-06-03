@@ -1,7 +1,6 @@
 package com.example.ucsocial
 
 import android.content.Context
-import android.os.Bundle
 import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,11 +17,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.example.vp_alpapp.DataStore
-import com.example.vp_alpapp.ListScreen
-import com.example.vp_alpapp.model.Login
 import com.example.vp_alpapp.viewmodel.LoginViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)

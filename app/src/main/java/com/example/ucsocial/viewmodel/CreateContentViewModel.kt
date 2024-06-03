@@ -6,8 +6,8 @@ import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
-import com.example.vp_alpapp.ListScreen
-import com.example.vp_alpapp.service.MyContainer
+import com.example.ucsocial.ListScreen
+import com.example.ucsocial.service.MyContainer
 import kotlinx.coroutines.launch
 
 import java.util.UUID

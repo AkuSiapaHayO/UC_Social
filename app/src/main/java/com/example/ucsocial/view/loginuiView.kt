@@ -48,10 +48,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.vp_alpapp.DataStore
-import com.example.vp_alpapp.ListScreen
 import com.example.vp_alpapp.R
-import com.example.vp_alpapp.ui.theme.orangelight
 import com.example.vp_alpapp.viewmodel.LoginViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)

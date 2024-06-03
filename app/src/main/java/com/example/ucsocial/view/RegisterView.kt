@@ -46,12 +46,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
-import androidx.compose.ui.platform.LocalContext
+import com.example.ucsocial.ListScreen
 import com.example.vp_alpapp.R
 import com.example.vp_alpapp.viewmodel.RegisterViewModel
-import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

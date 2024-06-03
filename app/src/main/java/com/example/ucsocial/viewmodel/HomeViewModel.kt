@@ -7,16 +7,16 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
-import com.example.vp_alpapp.DataStore
-import com.example.vp_alpapp.ListScreen
-import com.example.vp_alpapp.model.Content
-import com.example.vp_alpapp.model.Pengguna
-import com.example.vp_alpapp.service.MyContainer
+import com.example.ucsocial.DataStore
+import com.example.ucsocial.ListScreen
+import com.example.ucsocial.model.Content
+import com.example.ucsocial.model.Pengguna
+import com.example.ucsocial.service.MyContainer
 import kotlinx.coroutines.launch
 
 
 sealed interface HomeUIState {
-    data class Success(val data: List<Content>,val user: Pengguna) : HomeUIState
+    data class Success(val data: List<Content>, val user: Pengguna) : HomeUIState
     object Error : HomeUIState
     object Loading : HomeUIState
 

@@ -25,12 +25,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.ucsocial.service.MyContainer
+import com.example.ucsocial.ui.theme.UCSocialTheme
+import com.example.vp_alpapp.R
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            VPALPAPPTheme {
+            UCSocialTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -57,7 +59,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
-    VPALPAPPTheme {
+    UCSocialTheme {
 //
 
         Routes()
@@ -99,23 +101,23 @@ fun BottomNavigationBar(
 
         }
 
-        IconButton(onClick = {
-
-            if (MyContainer.ACCESS_TOKEN.isEmpty()) {
-                navController.navigate(ListScreen.Login.name)
-            }
-            else {
-                navController.navigate(ListScreen.Explore.name)
-
-            }
-        }) {
-            Image(
-                painter = painterResource(id = R.drawable.search),
-                contentDescription = null,
-                modifier = Modifier
-                    .size(24.dp)
-            )
-        }
+//        IconButton(onClick = {
+//
+//            if (MyContainer.ACCESS_TOKEN.isEmpty()) {
+//                navController.navigate(ListScreen.Login.name)
+//            }
+//            else {
+//                navController.navigate(ListScreen.Explore.name)
+//
+//            }
+//        }) {
+//            Image(
+//                painter = painterResource(id = R.drawable.search),
+//                contentDescription = null,
+//                modifier = Modifier
+//                    .size(24.dp)
+//            )
+//        }
         IconButton(onClick = {
             if (MyContainer.ACCESS_TOKEN.isEmpty()) {
                 navController.navigate(ListScreen.Login.name)

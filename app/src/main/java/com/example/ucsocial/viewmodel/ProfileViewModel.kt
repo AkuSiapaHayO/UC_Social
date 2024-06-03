@@ -7,10 +7,10 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
-import com.example.vp_alpapp.ListScreen
-import com.example.vp_alpapp.model.Content
-import com.example.vp_alpapp.model.Pengguna
-import com.example.vp_alpapp.service.MyContainer
+import com.example.ucsocial.ListScreen
+import com.example.ucsocial.model.Content
+import com.example.ucsocial.model.Pengguna
+import com.example.ucsocial.service.MyContainer
 import kotlinx.coroutines.launch
 
 sealed interface ProfileUiState {

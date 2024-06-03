@@ -69,15 +69,12 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
-import com.example.vp_alpapp.DataStore
-import com.example.vp_alpapp.ListScreen
+import com.example.ucsocial.model.Content
+import com.example.ucsocial.model.Pengguna
+import com.example.ucsocial.view.LoadImageCustom
 import com.example.vp_alpapp.R
-import com.example.vp_alpapp.model.Content
-import com.example.vp_alpapp.model.Pengguna
-import com.example.vp_alpapp.ui.theme.orangelight
 import com.example.vp_alpapp.viewmodel.ExploreViewModel
 import com.example.vp_alpapp.viewmodel.HomeViewModel
-import kotlin.random.Random
 
 @Composable
 fun FilterMenu(onTabSelected: (Boolean) -> Unit, isNewsSelected: MutableState<Boolean>) {
@@ -125,7 +122,7 @@ fun RowScope.Tab(
             .padding(8.dp)
             .clickable { onClick() }
             .background(
-                color = if (isSelected) orangelight else Color.Transparent,
+                color = if (isSelected) Color.Yellow else Color.Transparent,
                 shape = MaterialTheme.shapes.medium
             )
             .padding(12.dp)
@@ -211,10 +208,10 @@ fun Post(
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color.Black,
-                            modifier = Modifier.clickable {
-
-                                navController.navigate(ListScreen.Profile2.name + "/" + content.user.id.toString())
-                            }
+//                            modifier = Modifier.clickable {
+//
+//                                navController.navigate(ListScreen.Profile2.name + "/" + content.user.id.toString())
+//                            }
                         )
                     }
 
@@ -330,17 +327,17 @@ fun Post(
 //                        modifier = Modifier.size(24.dp)
 //                    )
 //                    Spacer(modifier = Modifier.width(16.dp))
-                    Image(
-                        painter = painterResource(id = R.drawable.comment),
-                        contentDescription = null,
-                        modifier = Modifier
-                            .size(24.dp)
-                            .clickable {
-
-                                navController.navigate(ListScreen.CommentView.name + "/" + content.id.toString())
-
-                            }
-                    )
+//                    Image(
+//                        painter = painterResource(id = R.drawable.comment),
+//                        contentDescription = null,
+//                        modifier = Modifier
+//                            .size(24.dp)
+//                            .clickable {
+//
+//                                navController.navigate(ListScreen.CommentView.name + "/" + content.id.toString())
+//
+//                            }
+//                    )
                     ShareButton()
 //                    Spacer(modifier = Modifier.width(16.dp))
 //                    Image(
@@ -353,22 +350,22 @@ fun Post(
                 if (user != null && user.id == content.user.id) {
 
 
-                    IconButton(
-                        onClick = {
-
-                            navController.navigate(ListScreen.EditKonten.name + "/" + content.id.toString())
-
-                        },
-                        modifier = Modifier.size(24.dp)
-
-                    ) {
-
-                        Icon(
-                            imageVector = Icons.Default.Edit,
-                            contentDescription = "edit",
-                            tint = Color.Black
-                        )
-                    }
+//                    IconButton(
+//                        onClick = {
+//
+//                            navController.navigate(ListScreen.EditKonten.name + "/" + content.id.toString())
+//
+//                        },
+//                        modifier = Modifier.size(24.dp)
+//
+//                    ) {
+//
+//                        Icon(
+//                            imageVector = Icons.Default.Edit,
+//                            contentDescription = "edit",
+//                            tint = Color.Black
+//                        )
+//                    }
                 }
             }
 
@@ -400,11 +397,11 @@ fun ShareButton() {
         // Start the share activity
         shareLauncher.launch(Intent.createChooser(shareIntent, "Share via"))
     }) {
-        Image(
-            painter = painterResource(id = R.drawable.share),
-            contentDescription = null,
-            modifier = Modifier.size(24.dp)
-        )
+//        Image(
+//            painter = painterResource(id = R.drawable.share),
+//            contentDescription = null,
+//            modifier = Modifier.size(24.dp)
+//        )
     }
 }
 @Composable
